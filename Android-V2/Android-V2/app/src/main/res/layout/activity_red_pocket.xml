@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data class="RedPacketActivityView">
+        <variable
+            name="viewModel"
+            type="com.yidao.threekmo.v2.viewmodel.RedPocketVm" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:background="#20c174"
+            android:paddingBottom="23px"
+            app:paddingBottom="@{23}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="52px"
+                android:layout_height="52px"
+                android:layout_marginLeft="32px"
+                android:layout_marginTop="16px"
+                android:onClick="backClick"
+                android:src="@mipmap/whiteback"
+                app:layout_height="@{52}"
+                app:layout_marginLeft="@{32}"
+                app:layout_marginTop="@{16}"
+                app:layout_width="@{52}" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/back"
+                android:layout_alignTop="@id/back"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="我的钱包"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="36px"
+                app:textSize="@{36}" />
+
+            <TextView
+                android:id="@+id/withdrawal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/back"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/back"
+                android:gravity="center"
+                android:layout_marginRight="32px"
+                app:layout_marginRight="@{32}"
+                android:text="提现"
+                android:visibility="@{viewModel.showWithdrawal}"
+                android:onClick="@{()->viewModel.withdrawal()}"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="32px"
+                app:textSize="@{32}" />
+
+        </RelativeLayout>
+
+        <com.ijustyce.fastkotlin.irecyclerview.IRecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+</layout>

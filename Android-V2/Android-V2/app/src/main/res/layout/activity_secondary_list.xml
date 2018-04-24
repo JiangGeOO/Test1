@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yidao.threekmo.activitys.SecondaryListActivity">
+
+    <RelativeLayout
+        android:id="@+id/rela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/tool_rela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:src="@drawable/selecter_back1" />
+
+            <RelativeLayout
+                android:id="@+id/titleRela"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="标题"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/title_size" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ivMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:src="@mipmap/mapicon2" />
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/ivMap"
+                android:clickable="true"
+                android:src="@drawable/selecter_search1" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/search_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_gray_back"
+                android:hint="附近的都在这里…"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/search_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/search2" />
+
+            <TextView
+                android:id="@+id/tvCancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text="取消"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/cancle"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    <!--<include layout="@layout/weidget_search_layout"></include>-->
+
+
+</RelativeLayout>
+
+<LinearLayout
+android:id="@+id/linear"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_below="@+id/rela"
+android:layout_marginTop="1dp"
+android:background="#fff"
+android:elevation="4dp"
+android:orientation="horizontal"
+android:visibility="visible">
+
+<com.yidao.threekmo.customview.IosSpinner
+    android:id="@+id/iosspinner1"
+    android:layout_width="0dp"
+    android:layout_height="40dp"
+    android:layout_weight="1"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:text="楼栋" />
+
+<View
+    android:layout_width="1px"
+    android:layout_height="20dp"
+    android:layout_gravity="center_vertical"
+    android:background="@android:color/background_dark" />
+
+<com.yidao.threekmo.customview.IosSpinner
+    android:id="@+id/iosspinner2"
+    android:layout_width="0dp"
+    android:layout_height="40dp"
+    android:layout_weight="1"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:text="层高" />
+
+</LinearLayout>
+
+<com.jcodecraeer.xrecyclerview.XRecyclerView
+android:id="@+id/recyclerview"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:layout_below="@+id/linear"></com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+    </RelativeLayout>

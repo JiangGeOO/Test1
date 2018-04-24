@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yidao.threekmo.activitys.OrderPayingActivity">
+
+    <RelativeLayout
+        android:id="@+id/title_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/alpha_green">
+
+        <ImageView
+            android:id="@+id/title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/whiteback"/>
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付中"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/paying_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_rela"
+        android:text="支付中..."
+        android:textColor="#303030"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/paying_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="若已支付完成，请刷新本页面"
+        android:layout_below="@+id/title_rela"
+        android:textColor="#3a3a3a"/>
+
+    <RelativeLayout
+        android:id="@+id/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/title_rela"
+        android:background="@drawable/shape_lable_green_line">
+
+        <TextView
+            android:id="@+id/refresh_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="刷新"
+            android:textColor="#3a3a3a"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

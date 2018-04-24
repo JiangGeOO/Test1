@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data class="ActivityPwSettingView">
+        <variable
+            name="viewModel"
+            type="com.yidao.threekmo.v2.viewmodel.PwSettingVm" />
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2f2">
+
+       <com.ijustyce.fastkotlin.ui.CommonTitleBar
+           android:layout_width="match_parent"
+           app:titleTxt="密码设置"
+           android:id="@+id/titleBar"
+           android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/resetPay"
+            android:layout_below="@id/titleBar"
+            android:layout_marginTop="18px"
+            app:layout_marginTop="@{18}"
+            android:layout_width="match_parent"
+            android:paddingLeft="30px"
+            app:paddingLeft="@{30}"
+            android:textSize="32px"
+            app:textSize="@{32}"
+            app:layout_height="@{92}"
+            android:textColor="#3a3a3a"
+            android:text="重置支付密码"
+            android:onClick="@{()->viewModel.resetPayPw()}"
+            android:background="@color/color_FFFFFF"
+            android:gravity="center_vertical"
+            android:layout_height="92px" />
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/setting_enter"
+            android:layout_below="@id/titleBar"
+            android:layout_marginTop="38px"
+            app:layout_marginTop="@{38}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_below="@id/resetPay"
+            android:layout_marginTop="2px"
+            app:layout_marginTop="@{2}"
+            android:layout_width="match_parent"
+            android:paddingLeft="30px"
+            app:paddingLeft="@{30}"
+            android:textSize="32px"
+            app:textSize="@{32}"
+            app:layout_height="@{94}"
+            android:textColor="#3a3a3a"
+            android:text="重置登录密码"
+            android:onClick="@{()->viewModel.resetLoginPw()}"
+            android:background="@color/color_FFFFFF"
+            android:gravity="center_vertical"
+            android:layout_height="94px" />
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/setting_enter"
+            android:layout_below="@id/resetPay"
+            android:layout_marginTop="20px"
+            app:layout_marginTop="@{20}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</layout>

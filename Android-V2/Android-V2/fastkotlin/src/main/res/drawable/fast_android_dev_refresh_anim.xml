@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false"  >
+
+    <item android:drawable="@drawable/fast_android_dev_repeat_00"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_01"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_02"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_03"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_04"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_05"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_06"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_07"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_08"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_09"  android:duration="100"/>
+
+    <item android:drawable="@drawable/fast_android_dev_repeat_10"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_11"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_12"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_13"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_14"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_15"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_16"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_17"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_18"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_19"  android:duration="100"/>
+
+    <item android:drawable="@drawable/fast_android_dev_repeat_20"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_21"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_22"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_23"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_24"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_25"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_26"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_27"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_28"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_29"  android:duration="100"/>
+
+    <item android:drawable="@drawable/fast_android_dev_repeat_30"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_31"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_32"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_33"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_34"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_35"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_36"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_37"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_38"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_39"  android:duration="100"/>
+
+    <item android:drawable="@drawable/fast_android_dev_repeat_40"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_41"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_42"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_43"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_44"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_45"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_46"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_47"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_48"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_49"  android:duration="100"/>
+
+    <item android:drawable="@drawable/fast_android_dev_repeat_50"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_51"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_52"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_53"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_54"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_55"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_56"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_57"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_58"  android:duration="100"/>
+    <item android:drawable="@drawable/fast_android_dev_repeat_59"  android:duration="100"/>
+
+    <item android:drawable="@drawable/fast_android_dev_repeat_60"  android:duration="100"/>
+
+</animation-list>

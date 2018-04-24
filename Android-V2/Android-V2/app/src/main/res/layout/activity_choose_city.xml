@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yidao.threekmo.activitys.ChooseCityActivity"
+    android:background="@color/back_gray">
+
+    <RelativeLayout
+        android:id="@+id/active_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/active_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/black_back" />
+
+        <TextView
+            android:id="@+id/active_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="选择城市"
+            android:textColor="@color/text_color_black" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/new_city_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/active_rela"
+        android:text="定位/最近访问"
+        android:textColor="#979797"/>
+
+    <RelativeLayout
+        android:id="@+id/shape_rela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/new_city_text"
+        android:background="@drawable/shape_lable_white">
+
+        <ImageView
+            android:id="@+id/shape_rela_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/city_location"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/shape_rela_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/shape_rela_image"
+            android:textColor="@color/text_color_black"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/all_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shape_rela"
+        android:text="全部城市"
+        android:textColor="#979797"/>
+
+    <TextView
+        android:id="@+id/city_hz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/all_city"
+        android:gravity="center"
+        android:text="杭州"
+        android:textColor="@color/text_color_black"
+        android:background="@drawable/shape_lable_white"/>
+
+    <TextView
+        android:id="@+id/city_sx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/all_city"
+        android:layout_toRightOf="@+id/city_hz"
+        android:gravity="center"
+        android:text="绍兴"
+        android:textColor="@color/text_color_black"
+        android:background="@drawable/shape_lable_white"/>
+
+    <TextView
+        android:id="@+id/city_jh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/all_city"
+        android:layout_toRightOf="@+id/city_sx"
+        android:gravity="center"
+        android:text="金华"
+        android:textColor="@color/text_color_black"
+        android:background="@drawable/shape_lable_white"/>
+
+    <TextView
+        android:id="@+id/city_nb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/city_hz"
+        android:gravity="center"
+        android:text="宁波"
+        android:textColor="@color/text_color_black"
+        android:background="@drawable/shape_lable_white"/>
+
+
+
+</RelativeLayout>

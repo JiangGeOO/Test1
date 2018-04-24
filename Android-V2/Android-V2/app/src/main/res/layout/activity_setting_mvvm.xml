@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data class="ActivitySettingView">
+        <variable
+            name="viewModel"
+            type="com.yidao.threekmo.v2.viewmodel.SettingVm" />
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2f2">
+
+       <com.ijustyce.fastkotlin.ui.CommonTitleBar
+           android:layout_width="match_parent"
+           app:titleTxt="设置"
+           android:id="@+id/titleBar"
+           android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/passwordSetting"
+            android:layout_below="@id/titleBar"
+            android:layout_marginTop="20px"
+            app:layout_marginTop="@{20}"
+            android:layout_width="match_parent"
+            android:paddingLeft="30px"
+            app:paddingLeft="@{30}"
+            android:textSize="32px"
+            app:textSize="@{32}"
+            app:layout_height="@{94}"
+            android:textColor="#3a3a3a"
+            android:text="密码设置"
+            android:onClick="@{()->viewModel.passwordSetting()}"
+            android:background="@color/color_FFFFFF"
+            android:gravity="center_vertical"
+            android:layout_height="94px" />
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/setting_enter"
+            android:layout_below="@id/titleBar"
+            android:layout_marginTop="38px"
+            app:layout_marginTop="@{38}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/cleanCache"
+            android:layout_below="@id/passwordSetting"
+            android:layout_marginTop="18px"
+            app:layout_marginTop="@{18}"
+            android:layout_width="match_parent"
+            android:paddingLeft="30px"
+            app:paddingLeft="@{30}"
+            android:textSize="32px"
+            app:textSize="@{32}"
+            app:layout_height="@{92}"
+            android:textColor="#3a3a3a"
+            android:text="清理缓存"
+            android:onClick="@{()->viewModel.cleanCache()}"
+            android:background="@color/color_FFFFFF"
+            android:gravity="center_vertical"
+            android:layout_height="92px" />
+
+        <TextView
+            android:layout_below="@id/passwordSetting"
+            android:layout_marginTop="18px"
+            app:layout_marginTop="@{18}"
+            android:layout_width="wrap_content"
+            android:paddingRight="30px"
+            app:paddingRight="@{30}"
+            android:textSize="32px"
+            app:textSize="@{32}"
+            android:textColor="#3a3a3a"
+            android:layout_alignParentRight="true"
+            android:text="@{viewModel.cacheSize}"
+            android:background="@color/color_FFFFFF"
+            android:gravity="center_vertical"
+            app:layout_height="@{92}"
+            android:layout_height="92px" />
+
+        <TextView
+            android:id="@+id/about"
+            android:layout_below="@id/cleanCache"
+            android:layout_marginTop="2px"
+            app:layout_marginTop="@{2}"
+            android:layout_width="match_parent"
+            android:paddingLeft="30px"
+            app:paddingLeft="@{30}"
+            android:textSize="32px"
+            app:textSize="@{32}"
+            app:layout_height="@{94}"
+            android:textColor="#3a3a3a"
+            android:text="@{viewModel.version}"
+            android:onClick="@{()->viewModel.about()}"
+            android:background="@color/color_FFFFFF"
+            android:gravity="center_vertical"
+            android:layout_height="94px" />
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/setting_enter"
+            android:layout_below="@id/cleanCache"
+            android:layout_marginTop="20px"
+            app:layout_marginTop="@{20}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_below="@id/about"
+            android:text="退出登入"
+            android:onClick="@{()->viewModel.logout()}"
+            android:layout_marginTop="20px"
+            app:layout_marginTop="@{20}"
+            android:textColor="#f01e1e"
+            android:textSize="32px"
+            app:textSize="@{32}"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@color/color_FFFFFF"
+            android:layout_width="match_parent"
+            app:layout_height="@{94}"
+            android:layout_height="94px" />
+
+    </RelativeLayout>
+</layout>

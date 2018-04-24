@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@mipmap/login_big_back"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yidao.threekmo.activitys.PhoneLoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/all_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/editext_back"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/logo_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="三公里"
+            android:textColor="#181820"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:id="@+id/phone_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/phone_back"
+            android:textColor="#181820"
+            android:singleLine="true"
+            android:inputType="phone"
+            android:textColorHint="#b5b5b5"
+            android:hint="请输入电话号码"/>
+
+        <ImageView
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/clear"
+            android:layout_alignParentRight="true"/>
+
+        <EditText
+            android:id="@+id/code_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/code_back"
+            android:textColor="#181820"
+            android:singleLine="true"
+            android:textColorHint="#b5b5b5"
+            android:hint="验证码"/>
+
+        <RelativeLayout
+            android:id="@+id/code_rela"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_crcle_blue">
+
+            <TextView
+                android:id="@+id/code_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发送验证码"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/white"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/deng_rela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_gray_back"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/deng_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="登陆"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/user_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/psd_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="20dp"
+            android:textColor="#181820"
+            android:text="密码登录"/>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="wrap_content"
+            android:layout_height="2px"
+            android:background="#181820"/>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="wrap_content"
+            android:layout_height="2px"
+            android:layout_alignParentRight="true"
+            android:background="#181820"/>
+
+        <TextView
+            android:id="@+id/fail_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请正确填写账号或验证码!"
+            android:textColor="#c12424"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cancle_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/cancle_back">
+
+        <TextView
+            android:id="@+id/cancle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:textColor="#181820"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

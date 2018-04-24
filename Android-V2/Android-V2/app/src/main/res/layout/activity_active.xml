@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_gray"
+    tools:context="com.yidao.threekmo.activitys.ActiveActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/active_rela"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/active_info_rela"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/active_info_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+                    android:id="@+id/active_info_all_rela"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/active_info_image"
+                    android:background="@android:color/white">
+
+                    <TextView
+                        android:id="@+id/active_info_all_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="活动未知"
+                        android:textColor="@color/text_color_black" />
+
+                    <LinearLayout
+                        android:id="@+id/active_info_all_linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/active_info_all_text"
+                        android:orientation="horizontal" />
+
+                    <TextView
+                        android:id="@+id/active_info_all_human"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/active_info_all_linear"
+                        android:text="报名人数：12人"
+                        android:textColor="#787878" />
+
+                    <TextView
+                        android:id="@+id/active_info_all_look"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/active_info_all_linear"
+                        android:text="浏览量：123"
+                        android:textColor="#787878"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/active_details_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/active_details_linear_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/active_details_linear_company_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/active_user" />
+
+                    <TextView
+                        android:id="@+id/active_details_linear_company_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="浙江驿道科技"
+                        android:textColor="@color/text_color_black" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/active_details_linear_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#dfdfdd" />
+
+                    <ImageView
+                        android:id="@+id/active_details_linear_time_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/active_date" />
+
+                    <TextView
+                        android:id="@+id/active_details_linear_time_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="2017-10-14 13:00至2017-10-14 13:00"
+                        android:textColor="@color/text_color_black" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/active_details_linear_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#dfdfdd" />
+
+                    <ImageView
+                        android:id="@+id/active_details_linear_address_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/active_location" />
+
+                    <TextView
+                        android:id="@+id/active_details_linear_address_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="浙江驿道科技"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textColor="@color/text_color_black" />
+
+                    <TextView
+                        android:id="@+id/active_details_linear_address_dis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="2.1km"
+                        android:textColor="@color/text_color_black" />
+
+                    <ImageView
+                        android:id="@+id/active_details_linear_address_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/right_first" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/webview_rela"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white">
+
+                <RelativeLayout
+                    android:id="@+id/view_rela"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/left_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1px"
+                        android:layout_centerVertical="true"
+                        android:background="#979797"/>
+
+                    <TextView
+                        android:id="@+id/webview_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/left_view"
+                        android:text="活动介绍"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/text_color_black"/>
+
+                    <View
+                        android:id="@+id/right_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1px"
+                        android:layout_toRightOf="@+id/webview_text"
+                        android:layout_centerVertical="true"
+                        android:background="#979797"/>
+                </RelativeLayout>
+
+
+
+                <WebView
+                    android:id="@+id/webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_rela"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/active_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/active_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/black_back" />
+
+        <TextView
+            android:id="@+id/active_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="活动"
+            android:textColor="@color/text_color_black" />
+
+        <ImageView
+            android:id="@+id/active_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/share_logo" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/baoming_rela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:id="@+id/baoming_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/baoming" />
+
+        <TextView
+            android:id="@+id/baoming_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="报名"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomRela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></RelativeLayout>
+
+</RelativeLayout>

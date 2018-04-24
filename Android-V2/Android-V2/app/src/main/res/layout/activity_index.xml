@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yidao.threekmo.activitys.IndexActivity">
+
+    <com.ashokvarma.bottomnavigation.BottomNavigationBar
+        android:id="@+id/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_above="@id/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:background="#B2B2B2"
+        android:layout_height="2px" />
+
+    <FrameLayout
+        android:id="@+id/fragment_replace"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:layout_above="@id/line"/>
+
+</RelativeLayout>

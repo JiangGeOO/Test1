@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tool="http://schemas.android.com/tools">
+
+    <data class="DialogPayPwView">
+        <variable
+            name="viewModel"
+            type="com.yidao.threekmo.v2.viewmodel.PocketPayVm" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_alpha_70_dialog">
+
+        <include
+            android:id="@+id/keyboardView"
+            app:viewModel="@{viewModel}"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tool:layout_height="435px"
+            layout="@layout/fastandroiddev3_pwd_keyboard" />
+
+        <RelativeLayout
+            android:id="@+id/payView"
+            android:layout_above="@id/keyboardView"
+            android:layout_marginBottom="84px"
+            app:layout_marginBottom="@{84}"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/radius_white_6"
+            android:layout_width="558px"
+            android:layout_height="wrap_content"
+            android:paddingBottom="28px"
+            app:paddingBottom="@{28}"
+            app:layout_width="@{558}">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="90px"
+                android:gravity="center"
+                android:text="请输入支付密码"
+                android:textColor="#333333"
+                android:textSize="36px"
+                android:textStyle="bold"
+                app:layout_height="@{90}"
+                app:textSize="@{36}" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_below="@id/title"
+                android:background="#c9c9c9"
+                app:layout_height="@{2}" />
+
+            <TextView
+                android:id="@+id/money"
+                android:layout_width="match_parent"
+                android:layout_height="84px"
+                android:layout_below="@id/line"
+                android:layout_marginTop="28px"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="60px"
+                android:text="@{viewModel.money}"
+                app:layout_height="@{84}"
+                app:layout_marginTop="@{28}"
+                app:textSize="@{60}"
+                tool:text="￥28.6" />
+
+            <TextView
+                android:id="@+id/hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/money"
+                android:layout_marginTop="10px"
+                android:gravity="center"
+                android:textColor="#666666"
+                android:textSize="32px"
+                android:text="@{viewModel.hint}"
+                app:layout_marginTop="@{10}"
+                app:textSize="@{32}"
+                tool:text="收取￥28.6手续费" />
+
+            <com.ijustyce.fastkotlin.ui.CodeView
+                android:id="@+id/payPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hint"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="26px"
+                android:layout_marginRight="26px"
+                android:layout_marginTop="66px"
+                app:code="@{viewModel.inputText}"
+                app:codeColor="#505050"
+                app:borderColor="@color/color_input_board"
+                app:dividerColor="@color/color_input_board"
+                app:layout_marginLeft="@{26}"
+                app:layout_marginRight="@{26}"
+                app:layout_marginTop="@{66}"
+                app:showType="password"
+                tool:text="123456789" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_above="@id/payView"
+            android:onClick="@{()->viewModel.close()}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="114px"
+            app:layout_marginRight="@{114}"
+            android:src="@mipmap/close_pay_dialog" />
+
+    </RelativeLayout>
+</layout>

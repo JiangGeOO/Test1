@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yidao.threekmo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 配置地图包、搜索包需要的基础权限开始 -->
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 用于写入缓存数据到扩展存储卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <!-- 配置地图包、搜索包需要的基础权限结束 -->
+    <application
+        android:name=".application.MyApplication"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/IAppTheme2"
+        tools:replace="android:allowBackup">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="1c32527824a82cb143f7385679a1ef05" />
+
+        <activity
+            android:name=".v2.activity.SplashActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter android:autoVerify="false">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="yidao" />
+                <data android:host="threekmo" />
+            </intent-filter>
+        </activity>
+
+        <!-- 配置友盟 -->
+        <!-- 替换为在友盟后台申请的应用Appkey -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5a0aa25df43e481aab0001d8" />
+        <!-- 应用的推广渠道名称，Channel ID自定义 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+        <!-- 配置友盟结束 -->
+
+
+        <!-- 支付宝配置 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <!-- 支付宝配置结束 -->
+
+        <activity
+            android:name=".activitys.SecondaryListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activitys.MapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.UserInfoEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.PhoneLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.PsdLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.SetPsdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.FindPsdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".map.MapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+
+        <service
+            android:name="com.amap.api.location.APSService"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activitys.SecondlyDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImagePickerThemeFullScreen" />
+        <activity
+            android:name=".activitys.AscriptionSubActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.MapSecondActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.ModifyPsdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.ImageShowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.WebViewScriptActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/WebViewTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- QQ相关配置 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 这地方的123456需要用你在开放平台申请的appid替换 -->
+                <data android:scheme="tencent1106380917" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- QQ相关配置结束 -->
+
+
+        <!-- 更新APK设置 -->
+        <service
+            android:name=".service.DownloadService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".service.MyBroadCast"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <!-- 设置结束 -->
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activitys.IndexActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.ActiveActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.ActiveBaoMingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activitys.ActiveSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.ActiveSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activitys.ChooseCityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.MyActiveListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.OrderRelaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.OrderPayingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.OrderPaySucessOrFailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.CityMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.ShopDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.ExperienceDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.OrderMySelfActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.OrderDetailMySelfActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.MyFollowShopActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.MyCollectCommodityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.UserSignInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+        <activity
+            android:name=".activitys.ShopSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+
+        <activity
+            android:name=".activitys.ExperienceMyListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ToolbarTheme" />
+
+        <!-- v2 -!-->
+
+        <meta-data
+            android:name="design_width"
+            android:value="750" />
+        <meta-data
+            android:name="design_height"
+            android:value="1334" />
+
+        <activity
+            android:name=".v2.activity.ShopListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:theme="@style/IWhite"
+            android:name=".v2.activity.PayPwActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:theme="@style/IWhite"
+            android:name=".v2.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:theme="@style/IWhite"
+            android:name=".v2.activity.PwSettingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:theme="@style/PocketPayTheme"
+            android:name=".v2.activity.PocketPayActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".v2.activity.RedPocketsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:theme="@style/IWhite"
+            android:name=".v2.activity.WithDrawalSelectActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:theme="@style/IWhite"
+            android:name=".v2.activity.WithDrawalActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:theme="@style/IWhite"
+            android:name=".v2.activity.WithdrawalDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:theme="@style/IWhite"
+            android:name=".v2.activity.WithdrawalListActivity"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

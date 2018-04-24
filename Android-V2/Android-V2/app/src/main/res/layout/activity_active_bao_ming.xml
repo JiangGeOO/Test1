@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yidao.threekmo.activitys.ActiveBaoMingActivity"
+    android:background="@color/back_gray">
+
+    <RelativeLayout
+        android:id="@+id/active_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/active_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/black_back" />
+
+        <TextView
+            android:id="@+id/active_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="完善信息"
+            android:textColor="@color/text_color_black" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/info_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:layout_below="@+id/active_rela"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:id="@+id/info_linear_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/info_linear_name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_centerVertical="true"
+                android:hint="请输入您的姓名"
+                android:textColorHint="#cbcbce"
+                android:layout_toLeftOf="@+id/info_linear_name_image"
+                android:textColor="@color/text_color_black"/>
+
+            <ImageView
+                android:id="@+id/info_linear_name_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/delete"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/info_linear_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#dfdfdd"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/info_linear_email_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_centerVertical="true"
+                android:hint="请输入您的姓名"
+                android:textColorHint="#cbcbce"
+                android:layout_toLeftOf="@+id/info_linear_email_image"
+                android:textColor="@color/text_color_black"/>
+
+            <ImageView
+                android:id="@+id/info_linear_email_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/delete"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/info_linear_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#dfdfdd"/>
+
+            <EditText
+                android:id="@+id/info_linear_phone_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_centerVertical="true"
+                android:hint="请输入您的电话"
+                android:textColorHint="#cbcbce"
+                android:layout_toLeftOf="@+id/info_linear_phone_image"
+                android:textColor="@color/text_color_black"/>
+
+            <ImageView
+                android:id="@+id/info_linear_phone_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/delete"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/next_rela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info_linear"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_crcle_green">
+
+        <TextView
+            android:id="@+id/next_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="下一步"
+            android:textColor="@android:color/white"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="#fff"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yidao.threekmo.activitys.SearchActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@drawable/alpha_green"
+        android:elevation="2dp"
+        android:paddingTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        >
+        <LinearLayout
+            android:paddingLeft="15dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:background="@drawable/shape_searchbg"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/search2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:hint="附近的都在这里…"
+                    android:padding="5dp"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:imeOptions="actionSearch"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvCancle"
+                android:layout_margin="15dp"
+                android:clickable="true"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="取消"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/blockSearchTags"
+            layout="@layout/block_search_tags"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"></include>
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/recyclerview"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+        <include
+            android:id="@+id/blockNosearch"
+            android:visibility="gone"
+            layout="@layout/block_nosearch_content"></include>
+
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>

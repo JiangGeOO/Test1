@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#f2f2f2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yidao.threekmo.activitys.ExperienceMyListActivity">
+
+    <RelativeLayout
+        android:id="@+id/title_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/alpha_green">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的体验"
+            android:textColor="@android:color/white"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/whiteback"/>
+
+    </RelativeLayout>
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_rela"/>
+
+    <RelativeLayout
+        android:id="@+id/isHave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:id="@+id/isHave_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/shop_none"/>
+
+        <TextView
+            android:id="@+id/isHave_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您还没有收藏任何商品哦~"
+            android:textColor="#9a9a9a"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/isHave_image"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

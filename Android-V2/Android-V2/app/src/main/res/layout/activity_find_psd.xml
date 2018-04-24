@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@mipmap/login_big_back"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yidao.threekmo.activitys.FindPsdActivity">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/login_back_black"
+        android:visibility="gone"/>
+
+
+    <RelativeLayout
+        android:id="@+id/all_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/editext_back">
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:textColor="#181820"
+            android:text="找回密码"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/edit_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/phone_back"
+            android:hint="请输入电话号码"
+            android:inputType="phone"
+            android:textColor="#26262d"
+            android:textColorHint="#b5b5b5"
+            android:singleLine="true"
+            android:layout_centerHorizontal="true"/>
+
+
+        <EditText
+            android:id="@+id/code_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/code_back"
+            android:hint="验证码"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="#26262d"
+            android:textColorHint="#b5b5b5"/>
+
+        <RelativeLayout
+            android:id="@+id/code_rela"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_crcle_green">
+
+            <TextView
+                android:id="@+id/code_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_centerInParent="true"
+                android:text="发送验证码"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/deng_rela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_gray_back"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/deng_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="下一步"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/clear"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/fail_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请正确填写账号或验证码!"
+            android:textColor="#c12424"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cancle_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/cancle_back">
+
+        <TextView
+            android:id="@+id/cancle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:textColor="#181820"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    tools:context="com.yidao.threekmo.activitys.OrderPaySucessOrFailActivity">
+
+    <RelativeLayout
+        android:id="@+id/title_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/alpha_green">
+
+        <ImageView
+            android:id="@+id/title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/whiteback"/>
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="付款成功"
+            android:textColor="@android:color/white"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pay_result_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_rela"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/pay_result_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="付款成功"
+            android:textColor="#303030"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/order_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/people_info_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pay_result_rela"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:id="@+id/people_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/people_pay_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="付款人："
+                android:textColor="#3a3a3a"/>
+
+            <TextView
+                android:id="@+id/people_pay_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="悟空思密达"
+                android:textColor="#3a3a3a"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#d8d8d8"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/people_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/people_pay">
+
+
+            <TextView
+                android:id="@+id/people_phone_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="付款电话："
+                android:textColor="#3a3a3a"/>
+
+            <TextView
+                android:id="@+id/people_phone_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="12345678911"
+                android:textColor="#3a3a3a"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#d8d8d8"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/people_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/people_phone">
+
+            <TextView
+                android:id="@+id/people_address_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="收货地址："
+                android:textColor="#3a3a3a"/>
+
+            <TextView
+                android:id="@+id/people_address_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="你说了你的发来大家分厘卡时间啊大家发简历啊打发打发"
+                android:textColor="#3a3a3a"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/people_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/people_address">
+
+            <TextView
+                android:id="@+id/people_order_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="订单编号："
+                android:textColor="#3a3a3a"/>
+
+            <TextView
+                android:id="@+id/people_order_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="12355548465462"
+                android:textColor="#3a3a3a"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#d8d8d8"
+                android:layout_alignParentTop="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/shop_info_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_below="@+id/people_info_rela">
+
+        <RelativeLayout
+            android:id="@+id/shop_shop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/shop_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/order_real"/>
+
+            <TextView
+                android:id="@+id/shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="悟空思密达的店"
+                android:layout_centerVertical="true"
+                android:textColor="#3a3a3a"/>
+
+            <ImageView
+                android:id="@+id/shop_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/fujinimage"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/shop_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shop_shop"
+            android:background="#f2f2f2">
+
+            <ImageView
+                android:id="@+id/shop_info_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/wangxingsuo"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:id="@+id/shop_info_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="就势力扩大解放啦急啊打飞机啊来得及发链接"
+                android:textColor="#3a3a3a"/>
+
+            <TextView
+                android:id="@+id/shop_info_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥234"
+                android:textColor="#ff3232"/>
+
+            <TextView
+                android:id="@+id/shop_info_money_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x1"
+                android:textColor="#3a3a3a"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/shop_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shop_info">
+
+            <TextView
+                android:id="@+id/shop_pay_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实付款"
+                android:textColor="#3a3a3a"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/shop_pay_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥234"
+                android:textColor="#fe3232"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#d8d8d8"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/go"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shop_pay">
+
+            <RelativeLayout
+                android:id="@+id/go_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/shape_lable_red_line">
+
+                <TextView
+                    android:id="@+id/go_on_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="继续购买"
+                    android:textColor="#ea3838"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/my_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/shape_lable_black_line">
+
+                <TextView
+                    android:id="@+id/my_order_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="我的订单"
+                    android:textColor="#3a3a3a"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/repay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/shape_lable_red_line"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/repay_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="重新购买"
+                    android:layout_centerInParent="true"
+                    android:textColor="#ea3838"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

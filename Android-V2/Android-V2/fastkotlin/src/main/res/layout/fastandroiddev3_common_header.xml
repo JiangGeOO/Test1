@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="TitleBarView">
+
+        <import type="com.ijustyce.fastkotlin.viewmodel.CommonTitleBarView" />
+
+        <import type="com.ijustyce.fastkotlin.event.TitleBarEvent" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="CommonTitleBarView" />
+
+        <variable
+            name="clickEvent"
+            type="TitleBarEvent" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/topView"
+        android:background="@{viewModel.titleBg}"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="@{(view)->clickEvent.titleBarClick(view)}">
+
+            <ImageView
+                android:id="@+id/commonTitleBarBackIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:onClick="backClick"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:src="@{viewModel.leftIcon}"
+                android:visibility="@{viewModel.leftIcon != -100 ? View.VISIBLE : View.GONE}" />
+
+            <TextView
+                android:id="@+id/commonTitleBarLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:maxEms="10"
+                android:maxLines="1"
+                android:onClick="@{(view)->clickEvent.leftTextClick(view)}"
+                android:paddingLeft="15dp"
+                android:text="@{viewModel.leftText}"
+                android:textColor="@{viewModel.leftTextColor}"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/commonTitleBarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxEms="10"
+                android:onClick="@{(view)->clickEvent.titleTextClick(view)}"
+                android:padding="10dp"
+                android:text="@{viewModel.titleText}"
+                android:textColor="@{viewModel.titleTextColor}"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/commonTitleBarRightText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/commonTitleBarTitle"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxEms="10"
+                android:onClick="@{(view)->clickEvent.rightTextClick(view)}"
+                android:padding="10dp"
+                android:text="@{viewModel.rightText}"
+                android:textColor="@{viewModel.rightTextColor}"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/commonTitleBarRightIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:onClick="@{(view)->clickEvent.rightIconClick(view)}"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:src="@{viewModel.rightIcon}"
+                android:visibility="@{viewModel.rightIcon != -100 ? View.VISIBLE : View.GONE}" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="#e7e7e7"
+                android:visibility="@{viewModel.showLine}" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>
