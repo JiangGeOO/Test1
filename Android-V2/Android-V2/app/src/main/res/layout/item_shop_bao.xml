@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent">
+
+    <com.yidao.threekmo.customview.RoundLayout
+        android:id="@+id/item_jing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:roundLayoutRadius="22px"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/item_jing_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/item_jing_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="丹尼尔瑞泽牛仔外套"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_centerHorizontal="true"
+            android:textColor="#181820"
+            android:layout_below="@+id/item_jing_image"/>
+
+        <TextView
+            android:id="@+id/item_jing_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥1042"
+            android:textColor="#f62c2c"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/item_jing_info"/>
+
+
+    </com.yidao.threekmo.customview.RoundLayout>
+
+</RelativeLayout>

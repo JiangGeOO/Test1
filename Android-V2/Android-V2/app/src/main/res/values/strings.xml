@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">三公里</string>
+
+    <string name="oss_bucketname">tkm</string>
+
+    <string name="update_hint">新版本更新提示</string>
+    <string name="down_hint">下载中，请稍后&#8230;</string>
+    <string name="down_title">正在更新</string>
+
+    <string name="shop_info">附近%d家体验店有售</string>
+
+    <string name="method_to_win">中奖\n策略</string>
+    <string name="about_account_money">使用说明\n• 2018年1月15日起，钱包余额可用于支付网星投票，
+        需输入支付密码后完成投票支付；\n• 2018年2月中旬起，钱包余额可用于商城购买商品消费。\n\n提现说明\n
+        • 钱包提现功能将于2018年2月中旬开放，届时您可将余额提现至您的个人支付宝、微信账户，
+        提现需收取0.6%的提现手续费；\n• 每笔提现最低金额金额为10元，低于10元不能进行提现操作</string>
+
+</resources>

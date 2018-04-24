@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/banner_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/banner_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/banner"/>
+
+        <LinearLayout
+            android:id="@+id/logo_rela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/banner_image"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/clothes_rela"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/clothes_rela_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/clothes"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/clothes_rela_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/clothes_rela_image"
+                    android:text="服饰"
+                    android:textColor="#505050"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/food_rela"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/food_rela_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/food"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/food_rela_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/food_rela_image"
+                    android:text="美食"
+                    android:textColor="#505050"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/house_rela"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/house_rela_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/house"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/house_rela_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/house_rela_image"
+                    android:text="住宿"
+                    android:textColor="#505050"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/travel_rela"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/travel_rela_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/travel"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/travel_rela_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/travel_rela_image"
+                    android:text="旅行"
+                    android:textColor="#505050"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/creatwork_rela"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/creatwork_rela_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/creatwork"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/creatwork_rela_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/creatwork_rela_image"
+                    android:text="创业"
+                    android:textColor="#505050"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

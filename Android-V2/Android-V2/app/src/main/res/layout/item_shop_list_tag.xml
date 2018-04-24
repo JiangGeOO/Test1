@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="java.lang.String" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:paddingRight="16px"
+        app:paddingRight="@{16}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text='@{item}'
+            tools:text="1.5KM"
+            android:textColor="#ffffff"
+            android:paddingLeft="16px"
+            android:paddingRight="16px"
+            android:paddingBottom="6px"
+            android:paddingTop="6px"
+            app:paddingLeft="@{16}"
+            app:paddingRight="@{16}"
+            app:paddingBottom="@{6}"
+            app:paddingTop="@{6}"
+            android:textSize="14sp"
+            android:background="@drawable/shape_circle_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data class="ItemFragmentIndexTopView">
+        <variable
+            name="item"
+            type="com.yidao.threekmo.bean.AchieveBinnerResult.DataBean" />
+        <variable
+            name="event"
+            type="com.yidao.threekmo.v2.viewmodel.IndexFragmentVm" />
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:background="@color/color_FFFFFF"
+        android:paddingLeft="30px"
+        app:paddingLeft="@{item.paddingLeft()}"
+        android:paddingRight="30px"
+        app:paddingRight="@{30}"
+        android:paddingTop="30px"
+        app:paddingTop="@{30}"
+        android:onClick="@{()->event.clickTopItem(item)}"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/bannerImg"
+            android:background="@mipmap/banner_yin"
+            android:layout_width="540px"
+            app:layout_width="@{540}"
+            app:layout_height="@{310}"
+            app:width="@{540}"
+            app:height="@{310}"
+            app:corner="@{12}"
+            android:scaleType="fitXY"
+            app:imageUrl="@{item.photo}"
+            android:layout_height="310px" />
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="CloudShopFragmentView">
+
+        <variable
+            name="viewModel"
+            type="com.yidao.threekmo.v2.viewmodel.CloudShopVm" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f1f1f1f1">
+
+        <include
+            android:id="@+id/recyclerView"
+            android:background="@color/color_FFFFFF"
+            layout="@layout/fastandroiddev3_fragment_list_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_rela" />
+
+        <RelativeLayout
+            app:fitWindows="@{1}"
+            android:alpha="0"
+            android:id="@+id/topSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_FFFFFF"
+            android:onClick="@{()->viewModel.search()}"
+            android:paddingTop="14px"
+            app:paddingTop="@{14}"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/searchHint"
+                android:layout_centerInParent="true"
+                android:background="@drawable/radius_f7f7f7_100"
+                android:layout_marginRight="40px"
+                android:layout_marginLeft="40px"
+                app:layout_height="@{62}"
+                android:paddingLeft="64px"
+                app:paddingLeft="@{64}"
+                android:textColor="#c1c1c7"
+                android:textSize="28px"
+                app:textSize="@{28}"
+                android:text="客官买点啥"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="62px" />
+
+            <ImageView
+                android:layout_width="28px"
+                android:layout_height="30px"
+                android:layout_marginLeft="60px"
+                android:src="@mipmap/shop_search"
+                app:layout_height="@{30}"
+                android:layout_centerVertical="true"
+                app:layout_marginLeft="@{60}"
+                app:layout_width="@{28}" />
+
+            <View
+                android:layout_marginTop="14px"
+                app:layout_marginTop="@{14}"
+                android:layout_below="@id/searchHint"
+                app:layout_height="@{2}"
+                android:background="#cccccc"
+                android:layout_width="match_parent"
+                android:layout_height="2px" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data class="IndexFragmentTopView">
+        <variable
+            name="event"
+            type="com.yidao.threekmo.v2.viewmodel.IndexFragmentVm" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:cacheColorHint="@null"
+            android:scrollbars="none" />
+
+        <View
+            android:id="@+id/line"
+            android:background="#ededed"
+            android:layout_width="match_parent"
+            android:layout_below="@id/list"
+            android:layout_marginTop="24px"
+            app:layout_marginTop="@{24}"
+            app:layout_height="@{2}"
+            android:layout_height="2px" />
+
+        <ImageView
+            android:id="@+id/lastNews"
+            android:layout_marginLeft="30px"
+            app:layout_marginLeft="@{30}"
+            android:layout_below="@id/line"
+            android:src="@mipmap/last_news"
+            android:layout_width="wrap_content"
+            app:layout_height="@{64}"
+            android:layout_height="64px" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/more"-->
+            <!--android:layout_alignTop="@id/lastNews"-->
+            <!--android:layout_alignBottom="@id/lastNews"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:layout_marginRight="30px"-->
+            <!--app:layout_marginRight="@{30}"-->
+            <!--android:textColor="#1cc383"-->
+            <!--android:textSize="28px"-->
+            <!--app:textSize="@{28}"-->
+            <!--android:onClick="@{()->event.viewMoreNews()}"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:text="更多"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <LinearLayout
+            android:layout_toRightOf="@id/lastNews"
+            android:layout_alignTop="@id/lastNews"
+            android:layout_alignBottom="@id/lastNews"
+            android:gravity="center_vertical"
+            tool:text="用户xxx兑换了iphone8"
+            android:layout_marginLeft="16px"
+            app:layout_marginLeft="@{16}"
+            android:layout_marginRight="26px"
+            app:layout_marginRight="@{26}"
+            android:textColor="#454545"
+            android:textSize="28px"
+            app:textSize="@{28}"
+            android:onClick="@{()->event.viewMoreNews()}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/newContent"
+            android:gravity="center_vertical"
+            tool:text="用户xxx兑换了iphone8"
+            android:textColor="#454545"
+            android:textSize="28px"
+            app:textSize="@{28}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!--<View-->
+            <!--android:background="#ededed"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_below="@id/lastNews"-->
+            <!--app:layout_height="@{20}"-->
+            <!--android:layout_height="20px" />-->
+
+    </RelativeLayout>
+</layout>

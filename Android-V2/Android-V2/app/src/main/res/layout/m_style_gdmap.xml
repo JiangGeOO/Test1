@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="123456789"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="5sp"
+        android:layout_toRightOf="@+id/image"/>
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="天气很不错"
+        android:layout_toRightOf="@+id/image"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="3sp"/>
+
+</RelativeLayout>

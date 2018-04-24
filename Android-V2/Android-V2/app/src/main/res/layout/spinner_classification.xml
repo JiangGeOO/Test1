@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/text_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#dfdfdd"/>
+
+        <TextView
+            android:id="@+id/all_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#131318"
+            android:background="@drawable/spinner_gray_back"
+            android:gravity="center"
+            android:clickable="true"
+            android:text="全部" />
+
+        <TextView
+            android:id="@+id/food_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#131318"
+            android:background="@drawable/spinner_gray_back"
+            android:layout_toRightOf="@+id/all_text"
+            android:gravity="center"
+            android:clickable="true"
+            android:text="美食" />
+
+        <TextView
+            android:id="@+id/train_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#131318"
+            android:background="@drawable/spinner_gray_back"
+            android:clickable="true"
+            android:layout_toRightOf="@+id/food_text"
+            android:gravity="center"
+            android:text="培训" />
+
+        <TextView
+            android:id="@+id/show_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#131318"
+            android:background="@drawable/spinner_gray_back"
+            android:layout_toRightOf="@+id/train_text"
+            android:gravity="center"
+            android:clickable="true"
+            android:text="演出" />
+
+        <TextView
+            android:id="@+id/tourism_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#131318"
+            android:background="@drawable/spinner_gray_back"
+            android:layout_below="@+id/show_text"
+            android:gravity="center"
+            android:clickable="true"
+            android:text="旅游"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tool="http://schemas.android.com/tools">
+
+    <data class="WithdrawalView">
+
+        <variable
+            name="viewModel"
+            type="com.yidao.threekmo.v2.viewmodel.WithdrawalVm" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ijustyce.fastkotlin.ui.CommonTitleBar
+            android:id="@+id/titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTxt="提现" />
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titlebar"
+            android:layout_marginLeft="32px"
+            android:layout_marginTop="20px"
+            android:text="填写账户信息"
+            android:textColor="#333333"
+            android:textSize="32px"
+            app:layout_marginLeft="@{32}"
+            app:layout_marginTop="@{20}"
+            app:textSize="@{32}" />
+
+        <EditText
+            android:id="@+id/account"
+            android:layout_width="match_parent"
+            android:layout_height="84px"
+            android:layout_below="@id/label"
+            android:layout_marginLeft="32px"
+            android:layout_marginRight="32px"
+            android:layout_marginTop="12px"
+            android:textSize="32px"
+            app:textSize="@{32}"
+            android:paddingLeft="10px"
+            app:paddingLeft="@{10}"
+            android:text="@={viewModel.account}"
+            android:visibility="@{viewModel.aliAccountVisible}"
+            android:hint="@{viewModel.accountHint}"
+            android:background="@color/color_FFFFFF"
+            app:layout_height="@{84}"
+            app:layout_marginLeft="@{32}"
+            app:layout_marginRight="@{32}"
+            app:layout_marginTop="@{12}" />
+
+        <TextView
+            android:id="@+id/weChatAccount"
+            android:layout_width="match_parent"
+            android:layout_height="84px"
+            android:layout_below="@id/label"
+            android:layout_marginLeft="32px"
+            android:layout_marginRight="32px"
+            android:layout_marginTop="12px"
+            android:textSize="32px"
+            app:textSize="@{32}"
+            android:visibility="@{viewModel.weChatAccountVisible}"
+            android:paddingLeft="10px"
+            app:paddingLeft="@{10}"
+            android:gravity="center_vertical"
+            tool:text="假装才十三"
+            android:text="@{viewModel.account}"
+            android:background="@color/color_FFFFFF"
+            app:layout_height="@{84}"
+            app:layout_marginLeft="@{32}"
+            app:layout_marginRight="@{32}"
+            app:layout_marginTop="@{12}" />
+
+        <TextView
+            android:id="@+id/switcher"
+            android:layout_width="140px"
+            app:layout_width="@{140}"
+            android:layout_height="48px"
+            app:layout_height="@{48}"
+            android:layout_below="@id/label"
+            android:layout_marginTop="28px"
+            android:textSize="28px"
+            app:textSize="@{28}"
+            android:paddingLeft="10px"
+            app:paddingLeft="@{10}"
+            android:gravity="center"
+            android:layout_marginRight="32px"
+            app:layout_marginRight="@{32}"
+            android:layout_alignRight="@id/account"
+            android:textColor="@color/white"
+            android:text="切换账号"
+            android:onClick="@{()->viewModel.switchAccount()}"
+            android:visibility="@{viewModel.switchBtVisible}"
+            android:background="@drawable/bt_switch"
+            app:layout_marginTop="@{28}" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/account"
+            android:layout_marginLeft="50px"
+            android:layout_marginRight="50px"
+            android:background="#d8d8d8"
+            app:layout_height="@{1}"
+            app:layout_marginLeft="@{50}"
+            app:layout_marginRight="@{50}" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="84px"
+            android:layout_below="@id/line"
+            android:layout_marginLeft="32px"
+            android:paddingLeft="10px"
+            android:textSize="32px"
+            app:textSize="@{32}"
+            android:text="@={viewModel.name}"
+            android:hint="收款账户真实姓名"
+            app:paddingLeft="@{10}"
+            android:layout_marginRight="32px"
+            android:background="@color/color_FFFFFF"
+            app:layout_height="@{84}"
+            app:layout_marginLeft="@{32}"
+            app:layout_marginRight="@{32}" />
+
+        <TextView
+            android:id="@+id/hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/name"
+            android:layout_below="@id/name"
+            android:layout_marginTop="8px"
+            android:text="请核对提现账户信息正确，以免提现失败"
+            android:textColor="#b3b3b3"
+            android:textSize="24px"
+            app:layout_marginTop="@{8}"
+            app:textSize="@{24}" />
+
+        <EditText
+            android:id="@+id/money"
+            android:layout_width="match_parent"
+            android:layout_height="290px"
+            android:layout_below="@id/hint"
+            android:layout_marginLeft="32px"
+            android:layout_marginRight="32px"
+            android:layout_marginTop="32px"
+            android:background="@color/color_FFFFFF"
+            app:layout_height="@{290}"
+            android:textSize="104px"
+            app:textSize="@{104}"
+            android:hint="¥0.00"
+            android:inputType="numberDecimal"
+            android:text="@={viewModel.withdrawalMoney}"
+            android:paddingBottom="40px"
+            app:paddingBottom="@{40}"
+            android:gravity="bottom"
+            android:paddingLeft="10px"
+            app:paddingLeft="@{10}"
+            app:layout_marginLeft="@{32}"
+            app:layout_marginRight="@{32}"
+            app:layout_marginTop="@{32}" />
+
+        <TextView
+            android:id="@+id/money_withdrawal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hint"
+            android:layout_marginLeft="52px"
+            android:layout_marginTop="52px"
+            android:text="提现金额"
+            android:textSize="32px"
+            app:textSize="@{32}"
+            android:textColor="#333333"
+            app:layout_marginLeft="@{52}"
+            app:layout_marginTop="@{52}" />
+
+        <TextView
+            android:text="（收取0.6%手续费）"
+            android:textSize="28px"
+            app:textSize="@{28}"
+            android:layout_toRightOf="@id/money_withdrawal"
+            android:layout_alignBottom="@id/money_withdrawal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/money"
+            android:layout_marginLeft="50px"
+            android:layout_marginRight="50px"
+            android:background="#d8d8d8"
+            app:layout_height="@{1}"
+            app:layout_marginLeft="@{50}"
+            app:layout_marginRight="@{50}" />
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_below="@id/line2"
+            android:layout_marginLeft="32px"
+            android:layout_marginRight="32px"
+            android:background="@color/color_FFFFFF"
+            android:gravity="center_vertical"
+            android:paddingLeft="20px"
+            android:text="@{viewModel.money}"
+            android:textSize="28px"
+            app:layout_height="@{80}"
+            app:layout_marginLeft="@{32}"
+            app:layout_marginRight="@{32}"
+            app:paddingLeft="@{20}"
+            app:textSize="@{28}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80px"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/line2"
+            android:layout_marginRight="32px"
+            android:gravity="center"
+            android:paddingRight="20px"
+            android:text="全部提现"
+            android:onClick="@{()->viewModel.withdrawalAll()}"
+            android:textColor="#1dc483"
+            android:textSize="28px"
+            app:layout_height="@{80}"
+            app:layout_marginRight="@{32}"
+            app:paddingRight="@{20}"
+            app:textSize="@{28}" />
+
+        <TextView
+            android:id="@+id/noticed"
+            android:layout_marginTop="8px"
+            app:layout_marginTop="@{8}"
+            android:textSize="24px"
+            app:textSize="@{24}"
+            android:textColor="#7f7f7f"
+            android:layout_marginLeft="16px"
+            app:layout_marginLeft="@{16}"
+            android:layout_alignLeft="@id/total"
+            android:layout_alignRight="@id/total"
+            android:gravity="left"
+            android:text="提示：单笔提现金额不得超过500元，最低可提现10元。"
+            android:layout_below="@id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_alignLeft="@id/total"
+            android:layout_alignRight="@id/total"
+            android:layout_below="@id/noticed"
+            android:layout_marginTop="50px"
+            android:background="@drawable/bt_withdrawal_disable"
+            android:text="确认提现"
+            android:onClick="@{()->viewModel.doWithdrawal()}"
+            android:textColor="@color/color_FFFFFF"
+            android:textSize="36px"
+            app:layout_height="@{100}"
+            app:layout_marginTop="@{50}"
+            app:textSize="@{36}" />
+
+    </RelativeLayout>
+</layout>

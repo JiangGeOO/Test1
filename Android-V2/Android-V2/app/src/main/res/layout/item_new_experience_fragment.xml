@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/detail_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/biaoti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="三公里体验中心"
+            android:textColor="#181820"/>
+
+        <TextView
+            android:id="@+id/look"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="123浏览量"
+            android:textColor="#545454"/>
+
+        <ImageView
+            android:id="@+id/datu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/wangxingback"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="1.5KM"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:id="@+id/distance"
+            android:background="@drawable/shape_circle_distance"
+            android:layout_alignRight="@id/datu"
+            android:layout_alignBottom="@id/datu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/sortOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已下架"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="势力扩大解放啦开始就打飞机啊来得及是的科技时代浪费啊啊第三方监理"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="#181820"/>
+
+        <ImageView
+            android:id="@+id/threesix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/threesix"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

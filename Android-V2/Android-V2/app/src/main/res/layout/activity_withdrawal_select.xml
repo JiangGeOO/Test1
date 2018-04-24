@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data class="WithdrawalSelectView">
+        <variable
+            name="viewModel"
+            type="com.yidao.threekmo.v2.viewmodel.WithDrawalSelectVm" />
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ijustyce.fastkotlin.ui.CommonTitleBar
+            android:layout_width="match_parent"
+            app:titleTxt="提现"
+            app:rightTxt="提现记录"
+            android:id="@+id/titlebar"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginLeft="32px"
+            app:layout_marginLeft="@{32}"
+            android:layout_marginTop="20px"
+            app:layout_marginTop="@{20}"
+            android:text="提现至"
+            android:textSize="32px"
+            app:textSize="@{32}"
+            android:id="@+id/label"
+            android:textColor="#333333"
+            android:layout_below="@id/titlebar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/select"
+            android:layout_below="@id/label"
+            android:layout_marginTop="10px"
+            app:layout_marginTop="@{10}"
+            android:paddingBottom="18px"
+            app:paddingBottom="@{18}"
+            android:paddingTop="26px"
+            app:paddingTop="@{26}"
+            android:paddingLeft="32px"
+            app:paddingLeft="@{32}"
+            android:paddingRight="32px"
+            app:paddingRight="@{32}"
+            android:background="@color/color_FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_marginTop="8px"
+                app:layout_marginTop="@{8}"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/icon_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/right"
+                android:layout_marginTop="128px"
+                app:layout_marginTop="@{128}"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/icon_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/icon_alipay"
+                android:src="@mipmap/icon_alipay"
+                app:layout_width="@{72}"
+                app:layout_height="@{72}"
+                android:onClick="@{()->viewModel.aliPay()}"
+                android:layout_width="64px"
+                android:layout_height="64px" />
+
+            <TextView
+                android:layout_marginLeft="22px"
+                app:layout_marginLeft="@{22}"
+                android:textColor="#333333"
+                android:textSize="26px"
+                app:textSize="@{26}"
+                android:text="支付宝"
+                android:onClick="@{()->viewModel.aliPay()}"
+                android:layout_toLeftOf="@id/right"
+                android:id="@+id/title_alipay"
+                android:layout_toRightOf="@id/icon_alipay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="18px"
+                app:textSize="@{24}"
+                android:id="@+id/alipay_hint"
+                android:textColor="#ababab"
+                android:layout_alignRight="@id/title_alipay"
+                android:layout_below="@id/title_alipay"
+                android:layout_marginTop="2px"
+                app:layout_marginTop="@{2}"
+                android:layout_alignLeft="@id/title_alipay"
+                android:text="支付宝转账"
+                android:onClick="@{()->viewModel.aliPay()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_below="@id/alipay_hint"
+                android:background="#d8d8d8"
+                android:layout_marginTop="20px"
+                app:layout_marginTop="@{20}"
+                android:layout_width="match_parent"
+                app:layout_height="@{2}"
+                android:layout_height="2px" />
+
+            <ImageView
+                android:layout_below="@id/line"
+                android:id="@+id/icon_wechat"
+                android:src="@mipmap/icon_wechat"
+                android:layout_marginTop="22px"
+                app:layout_marginTop="@{22}"
+                app:layout_width="@{72}"
+                app:layout_height="@{72}"
+                android:onClick="@{()->viewModel.weChat()}"
+                android:layout_width="64px"
+                android:layout_height="64px" />
+
+            <TextView
+                android:layout_marginLeft="22px"
+                app:layout_marginLeft="@{22}"
+                android:textColor="#333333"
+                android:textSize="26px"
+                app:textSize="@{26}"
+                android:text="微信"
+                android:onClick="@{()->viewModel.weChat()}"
+                android:layout_toLeftOf="@id/right"
+                android:id="@+id/title_wechat"
+                android:layout_alignTop="@id/icon_wechat"
+                android:layout_toRightOf="@id/icon_wechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="18px"
+                app:textSize="@{24}"
+                android:id="@+id/wechat_hint"
+                android:textColor="#ababab"
+                android:layout_below="@id/title_wechat"
+                android:layout_marginTop="2px"
+                app:layout_marginTop="@{2}"
+                android:layout_alignLeft="@id/title_wechat"
+                android:text="微信支付"
+                android:onClick="@{()->viewModel.weChat()}"
+                android:layout_alignRight="@id/title_wechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

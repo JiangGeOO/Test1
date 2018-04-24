@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="SeeShopFragmentView">
+        <variable
+            name="viewModel"
+            type="com.yidao.threekmo.v2.viewmodel.IndexFragmentVm" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/statusBar"
+            android:layout_width="match_parent"
+            android:layout_height="48px"
+            android:background="@drawable/alpha_green"
+            app:layout_height="@{48}" />
+
+        <TextView
+            android:id="@+id/title_rela"
+            android:paddingBottom="20px"
+            android:paddingTop="20px"
+            app:paddingBottom="@{20}"
+            app:paddingTop="@{20}"
+            android:textSize="36px"
+            app:textSize="@{36}"
+            android:text="网星探店"
+            android:gravity="center_horizontal"
+            android:textColor="@color/color_FFFFFF"
+            android:background="@drawable/alpha_green"
+            android:layout_below="@id/statusBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/recyclerView"
+            layout="@layout/fastandroiddev3_fragment_list_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_rela" />
+
+    </RelativeLayout>
+</layout>

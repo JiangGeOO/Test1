@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="item"
+            type="com.yidao.threekmo.bean.WithdrawalList.DataBean.DatasBean" />
+        <variable
+            name="viewModel"
+            type="com.yidao.threekmo.v2.viewmodel.WithDrawalListVm" />
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:paddingBottom="18px"
+        app:paddingBottom="@{18}"
+        android:onClick="@{()->viewModel.clickItem(item.id())}"
+        android:background="@color/color_FFFFFF"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/line"
+            android:visibility="@{item.lineVisible()}"
+            android:background="#dedede"
+            app:layout_height="@{2}"
+            android:layout_width="match_parent"
+            android:layout_height="2px" />
+
+        <TextView
+            android:layout_marginLeft="30px"
+            app:layout_marginLeft="@{30}"
+            android:layout_below="@id/line"
+            android:layout_marginTop="16px"
+            app:layout_marginTop="@{16}"
+            android:id="@+id/name"
+            android:textSize="30px"
+            app:textSize="@{30}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提现"
+            android:textColor="#333333" />
+
+        <TextView
+            android:layout_alignLeft="@id/name"
+            android:id="@+id/since"
+            android:layout_marginTop="8px"
+            app:layout_marginTop="@{8}"
+            android:textSize="24px"
+            app:textSize="@{24}"
+            android:textColor="#71727c"
+            android:text="@{item.create()}"
+            tool:text="2017.9.22 15:56"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name" />
+
+        <TextView
+            android:layout_marginTop="16px"
+            app:layout_marginTop="@{16}"
+            android:id="@+id/money"
+            android:layout_alignParentRight="true"
+            android:textSize="30px"
+            app:textSize="@{30}"
+            android:text="@{item.money()}"
+            android:layout_marginRight="30px"
+            app:layout_marginRight="@{30}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tool:text="-20.58"
+            android:textColor="#333333" />
+
+        <ImageView
+            android:id="@+id/rightIcon"
+            android:layout_marginTop="8px"
+            app:layout_marginTop="@{8}"
+            android:layout_below="@id/money"
+            app:layout_width="@{30}"
+            app:layout_height="@{32}"
+            android:src="@{item.icon()}"
+            android:layout_marginRight="26px"
+            app:layout_marginRight="@{26}"
+            android:layout_alignParentRight="true"
+            tool:src="@mipmap/icon_withdrawal_success"
+            android:layout_width="30px"
+            android:layout_height="32px" />
+
+        <TextView
+            android:textSize="28px"
+            app:textSize="@{28}"
+            tool:textColor="#333333"
+            android:layout_below="@id/money"
+            tool:text="提现中"
+            android:textColor="@{item.textColor()}"
+            android:text="@{item.status()}"
+            android:layout_marginTop="4px"
+            app:layout_marginTop="@{4}"
+            android:layout_toLeftOf="@id/rightIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</layout>

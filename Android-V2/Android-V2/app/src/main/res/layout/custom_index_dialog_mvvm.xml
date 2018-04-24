@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="IndexDialogView">
+        <variable
+            name="data"
+            type="com.yidao.threekmo.bean.DialogSecondResult" />
+        <variable
+            name="event"
+            type="com.yidao.threekmo.v2.viewmodel.IndexDialogVm" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="695px"
+        app:layout_height="@{695}"
+        android:background="@mipmap/index_ditu">
+
+        <ImageView
+            android:id="@+id/disBack"
+            android:layout_marginTop="78px"
+            app:layout_marginTop="@{78}"
+            android:layout_width="54px"
+            app:layout_width="@{54}"
+            android:layout_height="54px"
+            app:layout_height="@{54}"
+            android:onClick="@{()->event.close(data)}"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/dialog_dele" />
+
+        <com.ijustyce.fastkotlin.ui.CircleImageView
+            android:id="@+id/avatar"
+            android:layout_marginTop="58px"
+            app:layout_marginTop="@{58}"
+            android:layout_width="204px"
+            app:layout_width="@{204}"
+            android:layout_height="202px"
+            app:layout_height="@{202}"
+            app:width="@{204}"
+            app:height="@{202}"
+            app:imageUrl="@{data.getCandidate().getPhoto()}"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/usericon_default" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="88px"
+            app:layout_height="@{88}"
+            android:layout_below="@id/avatar"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            tools:text="李诗琪"
+            app:text="@{data.getCandidate().getName()}"
+            android:textColor="#37BC9B" />
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/avatar"
+            android:layout_marginTop="92px"
+            app:layout_marginTop="@{92}"
+            android:layout_centerHorizontal="true"
+            android:text="您已成为网星·里长候选人"
+            android:textColor="#37bc9b" />
+
+        <TextView
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="44px"
+            app:layout_height="@{44}"
+            android:layout_marginTop="34px"
+            app:layout_marginTop="@{34}"
+            android:layout_below="@id/info"
+            android:layout_centerHorizontal="true"
+            tools:text="234"
+            android:text="@{data.getCandidate().getPageviews()}"
+            android:drawablePadding="3dp"
+            android:textColor="#e9573f" />
+
+        <TextView
+            android:id="@+id/follow"
+            android:layout_width="wrap_content"
+            android:layout_height="44px"
+            app:layout_height="@{44}"
+            android:layout_marginTop="22px"
+            app:layout_marginTop="@{22}"
+            android:layout_below="@id/like"
+            android:layout_centerHorizontal="true"
+            tools:text="234"
+            android:text="@{data.getCandidate().getVoteSum()}"
+            android:drawablePadding="3dp"
+            android:textColor="#e9573f" />
+
+            <TextView
+                android:id="@+id/share"
+                android:layout_width="178px"
+                app:layout_width="@{178}"
+                android:layout_marginTop="50px"
+                app:layout_marginTop="@{50}"
+                android:layout_below="@id/follow"
+                android:layout_height="66px"
+                app:layout_height="@{66}"
+                android:layout_marginLeft="102px"
+                app:layout_marginLeft="@{102}"
+                android:gravity="center"
+                android:text="分享"
+                android:onClick="@{()->event.share(data)}"
+                android:background="@drawable/shape_dialog_index"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/look"
+                android:layout_toRightOf="@id/share"
+                android:layout_alignTop="@id/share"
+                android:layout_width="178px"
+                app:layout_width="@{178}"
+                android:layout_height="66px"
+                app:layout_height="@{66}"
+                android:layout_marginLeft="40px"
+                app:layout_marginLeft="@{40}"
+                android:gravity="center"
+                android:onClick="@{()->event.view(data)}"
+                android:text="立即查看"
+                android:background="@drawable/shape_dialog_index"
+                android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+</layout>

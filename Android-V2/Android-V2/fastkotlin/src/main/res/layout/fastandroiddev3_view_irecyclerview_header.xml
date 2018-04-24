@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/headerView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/refreshImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/fast_android_dev_pull_00" />
+
+    <ImageView
+        android:id="@+id/repeatAnim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:src="@drawable/fast_android_dev_refresh_anim" />
+
+    <TextView
+        android:id="@+id/refreshResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/refreshImg"
+        android:layout_alignBottom="@id/refreshImg"
+        android:drawableLeft="@mipmap/icon_refresh"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="刷新中・・・"
+        android:textColor="#8f8e94"
+        android:textSize="11dp"
+        android:visibility="gone" />
+</RelativeLayout>

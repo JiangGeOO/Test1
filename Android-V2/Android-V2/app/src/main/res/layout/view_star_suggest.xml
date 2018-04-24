@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data class="StarSuggestView">
+
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_marginTop="@{32}"
+        android:layout_marginTop="32px">
+
+        <TextView
+            android:layout_marginLeft="30px"
+            app:layout_marginLeft="@{30}"
+            android:text="网星推荐"
+            android:textSize="32px"
+            app:textSize="@{32}"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:id="@+id/label"
+            android:paddingBottom="16px"
+            app:paddingBottom="@{16}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_toRightOf="@id/label"
+            android:layout_marginLeft="16px"
+            app:layout_marginLeft="@{16}"
+            android:textSize="24px"
+            app:textSize="@{24}"
+            android:layout_marginTop="6px"
+            app:layout_marginTop="@{6}"
+            android:textStyle="bold"
+            android:text="好物在你身边"
+            android:textColor="#aeaeae"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_below="@id/label"
+            android:id="@+id/starSuggestList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@null"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+    </RelativeLayout>
+</layout>

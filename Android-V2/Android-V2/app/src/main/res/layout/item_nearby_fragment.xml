@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    android:orientation="vertical">
+    <!--android:elevation="2dp"-->
+    <!--android:layout_marginBottom="10dp"-->
+
+
+    <RelativeLayout
+        android:id="@+id/infoRela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:scaleType="fitXY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="0.7km"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDistance"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="创伟科技园"
+            android:textColor="#ffffff"/>
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小区"
+                android:textColor="#ffffff"/>
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:background="#ffffff" />
+
+            <TextView
+                android:id="@+id/tvCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="66"
+                android:textColor="#ffffff"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/location_nearby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/shop_loc"
+            android:layout_below="@+id/linear"/>
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_below="@+id/linear"
+            android:layout_toRightOf="@+id/location_nearby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="杭州市滨江区聚工路"
+            android:textColor="#ffffff" />
+
+
+        <!--<RelativeLayout-->
+        <!--android:layout_toRightOf="@id/ivImage"-->
+        <!--android:layout_alignTop="@id/ivImage"-->
+        <!--android:layout_alignBottom="@id/ivImage"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+        <!--<TextView-->
+        <!--android:id="@+id/tvName"-->
+        <!--android:text="创伟科技园"-->
+        <!--android:textColor="#333333"-->
+        <!--android:textSize="18sp"-->
+        <!--android:maxLines="1"-->
+        <!--android:ellipsize="end"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<ImageView-->
+        <!--android:id="@+id/ivType"-->
+        <!--android:src="@mipmap/type_xiaoqu"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:visibility="gone"/>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tvType"-->
+        <!--android:text="小区"-->
+        <!--android:textSize="12sp"-->
+        <!--android:layout_marginLeft="4dp"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:textColor="@color/type_xiaoqu"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+        <!--<ImageView-->
+        <!--android:background="#afb5bf"-->
+        <!--android:layout_marginLeft="4dp"-->
+        <!--android:layout_marginRight="4dp"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:layout_width="1dp"-->
+        <!--android:layout_height="10dp" />-->
+
+        <!--<TextView-->
+        <!--android:text="包含主题"-->
+        <!--android:textSize="12sp"-->
+        <!--android:layout_marginLeft="4dp"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:textColor="#afb5bf"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tvCount"-->
+        <!--android:text="66"-->
+        <!--android:textSize="12sp"-->
+        <!--android:layout_marginLeft="4dp"-->
+        <!--android:layout_marginRight="4dp"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:textColor="@color/type_xiaoqu"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+        <!--<TextView-->
+        <!--android:text="个"-->
+        <!--android:textSize="12sp"-->
+        <!--android:layout_marginLeft="4dp"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:textColor="#afb5bf"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<ImageView-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:src="@mipmap/positionicon1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tvAddress"-->
+        <!--android:text="杭州市滨江区聚工路"-->
+        <!--android:textColor="#afb5bf"-->
+        <!--android:textSize="12sp"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:ellipsize="end"-->
+        <!--android:maxLines="1"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tvDistance"-->
+        <!--android:layout_marginRight="12dp"-->
+        <!--android:text="0.7km"-->
+        <!--android:textColor="#afb5bf"-->
+        <!--android:textSize="12sp"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:ellipsize="end"-->
+        <!--android:maxLines="1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+        <!--</LinearLayout>-->
+
+        <!--</RelativeLayout>-->
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

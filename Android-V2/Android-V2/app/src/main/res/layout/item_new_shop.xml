@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/item_rela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/wangxingsuo"/>
+
+        <TextView
+            android:id="@+id/item_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#181820"
+            android:text="垃圾的房间啊劳动节放假啊了是酒店房卡好地方势力扩大解放啦"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_below="@+id/item_image"/>
+
+        <TextView
+            android:id="@+id/item_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#f62c2c"
+            android:text="￥123"
+            android:layout_below="@+id/item_info"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/lover_rela"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:id="@+id/money_rela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/money_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/money_close"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/zhifu_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="支付金额："
+                android:textColor="#3a3a3a"/>
+
+            <TextView
+                android:id="@+id/zhifu_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/zhifu_money"
+                android:text="￥234"
+                android:textColor="#ff3232"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#d8d8d8"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/zhifubao_rela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/money_rela">
+
+            <ImageView
+                android:id="@+id/zhifubao_rela_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/zhifubao_zhifu"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/zhifubao_rela_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付宝"
+                android:textColor="#3a3a3a"/>
+
+            <TextView
+                android:id="@+id/zhifubao_rela_scale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用支付宝钱包付钱"
+                android:textColor="#ababab"/>
+
+            <ImageView
+                android:id="@+id/zhifubao_rela_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/money_choose"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#d8d8d8"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/weixin_rela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/zhifubao_rela">
+
+            <ImageView
+                android:id="@+id/weixin_rela_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/wx_zhifu"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/weixin_rela_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付宝"
+                android:textColor="#3a3a3a"/>
+
+            <TextView
+                android:id="@+id/weixin_rela_scale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用支付宝钱包付钱"
+                android:textColor="#ababab"/>
+
+            <ImageView
+                android:id="@+id/weixin_rela_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/money_unchoose"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#d8d8d8"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/scale_rela"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weixin_rela"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/alpha_red">
+
+            <TextView
+                android:id="@+id/scale_rela_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="立即支付"
+                android:textColor="@android:color/white"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

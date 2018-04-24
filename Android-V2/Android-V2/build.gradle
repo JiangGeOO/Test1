@@ -1,0 +1,54 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    ext {
+        kotlin_version = '1.2.21'
+        android_plugin_version = '3.2.0-alpha05'
+        buildTool = '27.0.3'
+        support = '27.0.2'
+        compileSdk = 27
+        appVersionCode = 2170
+        appVerionName = '2.1.7'
+        targetSdk = 23
+        buildId = -2   //  -2、-1、1、2、for dev、test、previous、release
+        minSdk = buildId < 1 ? 23 : 14
+        isDebug = buildId < 0
+        uploadBugly = false
+        AndResGuard = '1.2.8'
+        qqAppId = '1106369608'
+    }
+
+    repositories {
+        maven { url 'https://dl.google.com/dl/android/maven2/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$android_plugin_version"
+        classpath 'com.tencent.bugly:symtabfileuploader:2.1.0'
+        classpath "com.tencent.mm:AndResGuard-gradle-plugin:$AndResGuard"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2' //
+        // add plugin
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://dl.google.com/dl/android/maven2/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+        maven { url "http://114.55.28.8:18081/nexus/content/repositories/public/" }
+        maven { url 'https://dl.bintray.com/hpdx/maven/' }
+        maven { url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/" }
+        maven { url "https://dl.bintray.com/thelasterstar/maven/" }
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

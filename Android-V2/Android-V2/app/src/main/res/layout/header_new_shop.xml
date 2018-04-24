@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#f3f3f3">
+
+    <RelativeLayout
+        android:id="@+id/viewPager_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager_rela_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/viewPager_rela_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hot_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:id="@+id/hot_rela_rela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#e2e2e7"
+                android:layout_alignParentBottom="true"
+                />
+
+            <ImageView
+                android:id="@+id/hot_rela_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/shop_hot_icon"/>
+
+            <TextView
+                android:id="@+id/hot_rela_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/hot_rela_image"
+                android:textColor="#eb873e"
+                android:text="热卖商品"/>
+
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/hot_recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/hot_rela_rela"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bao_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/alpha_orange">
+
+        <TextView
+            android:id="@+id/bao_rela_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="三公里爆款"
+            android:textColor="@android:color/white"
+            android:shadowColor="#D9A98C"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="3"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/bao_recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/bao_rela_text"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/jing_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:id="@+id/jing_rela_rela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:background="#e2e2e7"/>
+
+            <ImageView
+                android:id="@+id/jing_rela_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/shop_jing_icon"/>
+
+            <TextView
+                android:id="@+id/jing_rela_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/jing_rela_image"
+                android:textColor="#20bb71"
+                android:text="精选商品"/>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/jing_recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/jing_rela_rela"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/header_title_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/header_title_rela_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/shop_left"/>
+
+        <TextView
+            android:id="@+id/header_title_rela_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全部商品"
+            android:textColor="#181820"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/header_title_rela_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/shop_right"/>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

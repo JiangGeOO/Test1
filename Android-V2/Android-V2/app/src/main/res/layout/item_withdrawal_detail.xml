@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.yidao.threekmo.bean.WithdrawalBean" />
+    </data>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="32px"
+            android:paddingRight="32px"
+            app:paddingLeft="@{32}"
+            app:paddingRight="@{32}"
+            android:background="@color/color_FFFFFF">
+
+            <View
+                android:visibility="@{viewModel.lineVisible()}"
+                android:id="@+id/typeLine"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_below="@id/type"
+                android:layout_marginTop="20px"
+                android:background="#d8d8d8"
+                app:layout_height="@{2}"
+                app:layout_marginTop="@{20}" />
+
+            <TextView
+                android:id="@+id/left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/typeLine"
+                android:layout_marginTop="20px"
+                android:text="@{viewModel.name}"
+                tool:text="说明说明"
+                android:textColor="#858585"
+                android:textSize="32px"
+                app:layout_marginTop="@{20}"
+                app:textSize="@{32}" />
+
+            <TextView
+                android:id="@+id/account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/typeLine"
+                android:layout_marginTop="20px"
+                android:layout_marginLeft="150px"
+                app:layout_marginLeft="@{150}"
+                android:text="@{viewModel.value}"
+                android:textColor="#333333"
+                tool:text="说明说明ddddddddddddddddddddddddddddddddddddddd"
+                android:textSize="32px"
+                app:layout_marginTop="@{20}"
+                app:textSize="@{viewModel.textSize()}" />
+
+        </RelativeLayout>
+
+</layout>

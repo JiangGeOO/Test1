@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/text_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#dfdfdd"/>
+
+        <TextView
+            android:id="@+id/all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="全部"
+            android:textColor="#131318"
+            android:background="@drawable/spinner_gray_back"/>
+
+        <TextView
+            android:id="@+id/today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="今天"
+            android:textColor="#131318"
+            android:layout_toRightOf="@+id/all"
+            android:background="@drawable/spinner_gray_back"/>
+
+        <TextView
+            android:id="@+id/tommrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="明天"
+            android:textColor="#131318"
+            android:layout_toRightOf="@+id/today"
+            android:background="@drawable/spinner_gray_back"/>
+
+        <TextView
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="开始时间"
+            android:textColorHint="#131318"
+            android:textColor="#131318"
+            android:layout_below="@+id/all"
+            android:background="@drawable/spinner_gray_back"/>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#dfdfdd"
+            android:layout_below="@+id/all"
+            android:layout_toRightOf="@+id/start"
+            />
+
+        <TextView
+            android:id="@+id/end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="结束时间"
+            android:textColorHint="#131318"
+            android:textColor="#131318"
+            android:layout_below="@+id/all"
+            android:layout_toRightOf="@+id/view1"
+            android:background="@drawable/spinner_gray_back"/>
+
+        <TextView
+            android:id="@+id/queding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#131318"
+            android:layout_below="@+id/all"
+            android:layout_toRightOf="@+id/end"
+            android:background="@drawable/spinner_gray_back"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/date_choose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/choose_rela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/choose_false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消"/>
+
+            <TextView
+                android:id="@+id/choose_true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="确定"/>
+
+        </RelativeLayout>
+
+        <DatePicker
+            android:id="@+id/pvTime"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/search_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/location" />
+
+        <TextView
+            android:id="@+id/location_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/location"
+            tools:text="location text"
+            android:ellipsize="end"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/location_text"
+            android:background="@drawable/shape_mainsearch"
+            android:drawableLeft="@mipmap/search2"
+            android:gravity="center_vertical"
+            android:hint="附近的都在这里..." />
+
+    </RelativeLayout>
+
+    <com.yidao.threekmo.customview.DragTopLayout
+        android:id="@+id/dragLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_rela">
+
+        <LinearLayout
+            android:id="@+id/top_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/banner_rela"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true">
+
+                <ImageView
+                    android:id="@+id/banner_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"/>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/logo_rela"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/banner_image"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/clothes_rela"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/clothes_rela_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/clothes" />
+
+                    <TextView
+                        android:id="@+id/clothes_rela_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/clothes_rela_image"
+                        android:layout_centerHorizontal="true"
+                        android:text="服饰"
+                        android:textColor="#505050" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/food_rela"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/food_rela_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/food" />
+
+                    <TextView
+                        android:id="@+id/food_rela_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/food_rela_image"
+                        android:layout_centerHorizontal="true"
+                        android:text="美食"
+                        android:textColor="#505050" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/house_rela"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/house_rela_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/house" />
+
+                    <TextView
+                        android:id="@+id/house_rela_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/house_rela_image"
+                        android:layout_centerHorizontal="true"
+                        android:text="住宿"
+                        android:textColor="#505050" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/travel_rela"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/travel_rela_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/travel" />
+
+                    <TextView
+                        android:id="@+id/travel_rela_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/travel_rela_image"
+                        android:layout_centerHorizontal="true"
+                        android:text="旅行"
+                        android:textColor="#505050" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/creatwork_rela"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/creatwork_rela_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/creatwork" />
+
+                    <TextView
+                        android:id="@+id/creatwork_rela_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/creatwork_rela_image"
+                        android:layout_centerHorizontal="true"
+                        android:text="创业"
+                        android:textColor="#505050" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/top_spinner_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/back_gray"
+                />
+
+            <LinearLayout
+                android:id="@+id/spinner_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--<com.yidao.threekmo.customview.ClassificationSpinner-->
+                <!--android:id="@+id/classificationSpinner"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:background="#FFFFFF"-->
+                <!--android:text="分类"-->
+                <!--android:drawableRight="@mipmap/down2"-->
+                <!--android:gravity="center"/>-->
+
+                <com.yidao.threekmo.customview.NearBySpinner
+                    android:id="@+id/nearBySpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:drawableRight="@mipmap/down2"
+                    android:gravity="center"
+                    android:text="附近" />
+
+                <com.yidao.threekmo.customview.DateSpinner
+                    android:id="@+id/dateSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:drawableRight="@mipmap/down2"
+                    android:gravity="center"
+                    android:text="日期" />
+
+                <com.yidao.threekmo.customview.SortSpinner
+                    android:id="@+id/sortSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:drawableRight="@mipmap/down2"
+                    android:gravity="center"
+                    android:text="排序" />
+
+            </LinearLayout>
+
+            <com.jcodecraeer.xrecyclerview.XRecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar" />
+
+
+        </LinearLayout>
+
+    </com.yidao.threekmo.customview.DragTopLayout>
+
+</RelativeLayout>

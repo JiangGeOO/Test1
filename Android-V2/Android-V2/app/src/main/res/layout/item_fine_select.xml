@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.yidao.threekmo.v2.model.ListHandpickItem" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:paddingBottom="24px"
+        app:paddingBottom="@{24}"
+        android:background="@drawable/radius_white_4"
+        app:layout_marginLeft="@{viewModel.marginLeft()}"
+        app:layout_marginRight="@{30}">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="266px"
+            app:layout_width="@{266}"
+            app:width="@{266}"
+            app:corner="@{8}"
+            app:type="@{1}"
+            android:layout_height="282px"
+            app:layout_height="@{282}"
+            app:height="@{282}"
+            android:scaleType="fitXY"
+            app:imageUrl="@{viewModel.photo}"
+            tool:src="@mipmap/wangxingsuo" />
+
+        <TextView
+            android:id="@+id/item_info"
+            android:layout_width="266px"
+            app:layout_width="@{266}"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_image"
+            android:layout_marginTop="18px"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@{viewModel.title}"
+            android:textColor="#181820"
+            android:textSize="28px"
+            android:gravity="center"
+            app:layout_marginTop="@{18}"
+            app:textSize="@{28}"
+            tool:text="垃圾的房间啊劳动" />
+
+        <TextView
+            android:id="@+id/item_money"
+            android:layout_width="266px"
+            app:layout_width="@{266}"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/item_info"
+            android:layout_below="@id/item_info"
+            android:layout_marginTop="14px"
+            android:text="@{viewModel.getPrice()}"
+            android:textColor="#f62c2c"
+            android:textSize="28px"
+            android:gravity="center"
+            app:layout_marginTop="@{14}"
+            app:textSize="@{28}"
+            tool:text="￥123" />
+
+    </RelativeLayout>
+</layout>

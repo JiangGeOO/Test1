@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data class="RedPacketTopView">
+
+        <variable
+            name="viewModel"
+            type="com.yidao.threekmo.v2.viewmodel.RedPocketVm" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#20c174"
+            android:paddingBottom="48px"
+            android:paddingRight="32px"
+            app:paddingBottom="@{48}"
+            app:paddingRight="@{32}">
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关于余额"
+                android:textSize="24px"
+                app:textSize="@{24}"
+                android:onClick="@{()->viewModel.aboutMoney()}"
+                android:drawableLeft="@mipmap/icon_about"
+                android:layout_marginTop="23px"
+                app:layout_marginTop="@{23}"
+                android:textColor="@color/color_FFFFFF"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:id="@+id/money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="43px"
+                android:gravity="center"
+                android:text="@{viewModel.money}"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="72px"
+                app:layout_marginTop="@{43}"
+                app:textSize="@{72}" />
+
+            <TextView
+                android:id="@+id/money_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/money"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="43px"
+                android:gravity="center"
+                android:text="账户余额(元)"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="28px"
+                app:layout_marginTop="@{43}"
+                app:textSize="@{28}" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_below="@id/top"
+            android:layout_marginTop="14px"
+            app:layout_marginTop="@{14}"
+            android:paddingLeft="32px"
+            app:paddingLeft="@{32}"
+            android:paddingTop="18px"
+            app:paddingTop="@{18}"
+            android:paddingBottom="18px"
+            app:paddingBottom="@{18}"
+            android:textSize="28px"
+            app:textSize="@{28}"
+            android:textColor="#8e8e8e"
+            android:text="收支明细"
+            android:id="@+id/label"
+            android:background="@color/color_FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_marginLeft="32px"
+            app:layout_marginLeft="@{32}"
+            android:layout_marginRight="32px"
+            app:layout_marginRight="@{32}"
+            app:layout_height="@{2}"
+            android:background="#dedede"
+            android:layout_alignBottom="@id/label"
+            android:layout_width="match_parent"
+            android:layout_height="2px" />
+
+    </RelativeLayout>
+
+</layout>

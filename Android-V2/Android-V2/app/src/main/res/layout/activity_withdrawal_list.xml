@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="WithdrawalListView">
+
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ijustyce.fastkotlin.ui.CommonTitleBar
+            android:layout_width="match_parent"
+            app:titleTxt="提现记录"
+            android:id="@+id/top"
+            android:layout_height="wrap_content" />
+
+        <com.ijustyce.fastkotlin.irecyclerview.IRecyclerView
+            android:id="@+id/list"
+            android:layout_below="@id/top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="22px"
+            android:scrollbars="none"
+            app:layout_marginTop="@{22}" />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_below="@id/top"
+            android:id="@+id/noDataView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icon_empty"
+                android:layout_width="284px"
+                android:layout_height="284px"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="276px"
+                android:src="@mipmap/icon_empty_withdrawal"
+                app:layout_height="@{284}"
+                app:layout_marginTop="@{276}"
+                app:layout_width="@{284}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/icon_empty"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40px"
+                android:text="暂无任何记录哦~"
+                android:textColor="#9a9a9a"
+                android:textSize="32px"
+                app:layout_marginTop="@{40}"
+                app:textSize="@{32}" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

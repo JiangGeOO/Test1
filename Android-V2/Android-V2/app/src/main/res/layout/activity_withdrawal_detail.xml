@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="WithdrawalDetailView">
+
+        <variable
+            name="viewModel"
+            type="com.yidao.threekmo.v2.viewmodel.WithdrawalDetailVm" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:background="@color/color_FFFFFF"
+            android:layout_width="match_parent"
+            android:paddingBottom="18px"
+            app:paddingBottom="@{18}"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32px"
+                android:layout_marginTop="16px"
+                android:onClick="backClick"
+                android:src="@mipmap/icon_back"
+                app:layout_marginLeft="@{32}"
+                app:layout_marginTop="@{16}" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/back"
+                android:layout_alignTop="@id/back"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="账单详情"
+                android:textColor="#333333"
+                android:textSize="36px"
+                android:textStyle="bold"
+                app:textSize="@{36}" />
+
+            <TextView
+                android:id="@+id/withdrawal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/back"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/back"
+                android:layout_marginRight="32px"
+                android:gravity="center"
+                android:onClick="@{()->viewModel.contactUs()}"
+                android:text="联系客服"
+                android:textColor="#333333"
+                android:textSize="30px"
+                app:layout_marginRight="@{32}"
+                app:textSize="@{30}" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_below="@id/back"
+            android:background="#d8d8d8"
+            app:layout_height="@{2}" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_FFFFFF"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="28px"
+            android:paddingTop="28px"
+            app:paddingBottom="@{28}"
+            app:paddingTop="@{28}">
+
+            <ImageView
+                android:layout_width="124px"
+                android:layout_height="124px"
+                android:layout_centerHorizontal="true"
+                android:src="@{viewModel.imgId}"
+                app:layout_height="@{124}"
+                app:layout_width="@{124}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24px"
+                android:text="@{viewModel.statusText}"
+                android:textColor="#333333"
+                android:textSize="36px"
+                app:layout_marginTop="@{24}"
+                app:textSize="@{36}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16px"
+                android:text="@{viewModel.statusHint}"
+                android:textColor="#858585"
+                android:textSize="28px"
+                app:layout_marginTop="@{16}"
+                app:textSize="@{28}" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:background="@color/color_FFFFFF"
+            android:paddingBottom="20px"
+            app:layout_marginTop="@{20}"
+            app:paddingBottom="@{20}">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+</layout>

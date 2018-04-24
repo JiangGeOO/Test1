@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/title_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/alpha_green">
+
+        <ImageView
+            android:id="@+id/title_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/shop_loc"/>
+
+        <TextView
+            android:id="@+id/title_loc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="杭州"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/title_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="附近的都在这里..."
+            android:background="@drawable/shape_circle_shop_white"/>
+
+        <ImageView
+            android:id="@+id/title_searchimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/shop_search"/>
+
+    </RelativeLayout>
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/xrecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/title_rela"/>
+
+</RelativeLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="IndexFragmentView">
+        <variable
+            name="viewModel"
+            type="com.yidao.threekmo.v2.viewmodel.IndexFragmentVm" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/statusBar"
+            android:layout_width="match_parent"
+            android:layout_height="48px"
+            android:background="@drawable/alpha_green"
+            app:layout_height="@{48}" />
+
+        <RelativeLayout
+            android:layout_below="@id/statusBar"
+            android:id="@+id/title_rela"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:background="@drawable/alpha_green"
+            app:layout_height="@{90}">
+
+            <ImageView
+                android:id="@+id/title_img"
+                android:layout_width="35px"
+                android:layout_height="35px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:src="@mipmap/shop_loc"
+                app:layout_height="@{35}"
+                android:onClick="@{()->viewModel.clickLocation()}"
+                app:layout_marginLeft="@{30}"
+                app:layout_width="@{35}" />
+
+            <TextView
+                android:id="@+id/title_loc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8px"
+                android:layout_toRightOf="@id/title_img"
+                android:text="杭州"
+                android:singleLine="true"
+                android:textSize="36px"
+                android:onClick="@{()->viewModel.clickLocation()}"
+                app:textSize="@{36}"
+                android:textColor="@android:color/white"
+                app:layout_marginLeft="@{8}" />
+
+            <TextView
+                android:id="@+id/title_search"
+                android:layout_width="wrap_content"
+                android:layout_height="60px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_toRightOf="@id/title_loc"
+                android:background="@drawable/shape_circle_shop_white"
+                android:gravity="center_vertical"
+                android:paddingLeft="76px"
+                android:onClick="@{()->viewModel.search()}"
+                android:text="附近的都在这里..."
+                android:textColor="#9f9f9f"
+                android:textSize="28px"
+                app:textSize="@{28}"
+                app:layout_height="@{60}"
+                app:layout_marginLeft="@{30}"
+                app:layout_marginRight="@{30}"
+                app:paddingLeft="@{76}" />
+
+            <ImageView
+                android:id="@+id/title_searchimg"
+                android:layout_width="28px"
+                android:layout_height="30px"
+                android:layout_alignLeft="@id/title_search"
+                android:layout_alignTop="@id/title_search"
+                android:layout_marginLeft="36px"
+                android:layout_marginTop="15px"
+                android:src="@mipmap/shop_search"
+                app:layout_height="@{30}"
+                app:layout_marginLeft="@{36}"
+                app:layout_marginTop="@{15}"
+                app:layout_width="@{28}" />
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/recyclerView"
+            layout="@layout/fastandroiddev3_fragment_list_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_rela" />
+
+        <ImageView
+            android:id="@+id/icon_win"
+            android:onClick="@{()->viewModel.clickHowToWin()}"
+            android:src="@mipmap/icon_win"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="32px"
+            app:layout_marginRight="@{32}"
+            android:layout_marginBottom="32px"
+            app:layout_marginBottom="@{32}"
+            app:layout_width="@{150}"
+            app:layout_height="@{144}"
+            android:layout_width="150px"
+            android:layout_height="144px" />
+
+    </RelativeLayout>
+</layout>

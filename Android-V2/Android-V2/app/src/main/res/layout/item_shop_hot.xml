@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/item_hot"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/wangxingsuo"/>
+
+        <TextView
+            android:id="@+id/item_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="阿联看大家分厘卡机动力风机all科技东富龙爱的色放"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="#181820"
+            android:layout_below="@+id/item_image"/>
+
+        <TextView
+            android:id="@+id/item_ago_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥178"
+            android:textColor="#cacaca"
+            android:layout_below="@+id/item_info"/>
+
+        <TextView
+            android:id="@+id/item_now_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="限时价￥123"
+            android:textColor="#f62c2c"
+            android:layout_below="@+id/item_ago_money"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

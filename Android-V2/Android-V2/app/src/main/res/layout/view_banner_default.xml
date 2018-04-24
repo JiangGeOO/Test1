@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data class="DefaultBannerView">
+        <variable
+            name="viewModel"
+            type="com.yidao.threekmo.v2.viewmodel.CloudShopVm" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ijustyce.fastkotlin.ui.IScrollPager
+            android:id="@+id/scrollPager"
+            android:layout_width="match_parent"
+            android:layout_height="445px"
+            app:layout_height="@{445}" />
+
+        <ImageView
+            android:id="@+id/icon_search"
+            android:layout_width="72px"
+            android:layout_height="72px"
+            android:onClick="@{()->viewModel.search()}"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="64px"
+            android:src="@mipmap/search"
+            app:layout_height="@{72}"
+            app:layout_marginRight="@{30}"
+            app:layout_marginTop="@{64}"
+            app:layout_width="@{72}" />
+
+    </RelativeLayout>
+</layout>

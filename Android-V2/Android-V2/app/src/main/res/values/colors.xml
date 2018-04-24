@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#20c174</color>
+    <color name="colorPrimaryDark">#20c174</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="d8d8d8">#d8d8d8</color>
+    <color name="inactive_tab_text">#76746F</color>
+
+    <color name="usercenter_textcolor">#6a788c</color>
+
+    <color name="usercenter_clickcolor">#66c6cdd8</color>
+    <color name="usercenter_unclickcolor">#00ffffff</color>
+    
+    <color name="type_shangchang">#ff5a5a</color>
+    <color name="type_xiezilou">#46c6b2</color>
+    <color name="type_xiaoqu">#fd9d21</color>
+    
+    <color name="color_input_board">#bdbdbd</color>
+    <color name="color_input_board_error">#c83c3c</color>
+
+    <color name="color_alpha_40">#66000000</color>
+    <color name="color_alpha_10">#05000000</color>
+    <color name="color_alpha_20">#34000000</color>
+    <color name="color_alpha_30">#4d000000</color>
+    <color name="color_alpha_80">#CC000000</color>
+    <color name="color_alpha_60">#9A000000</color>
+    
+    <color name="color_alpha_70_dialog">#B20F0F13</color>
+
+    <color name="filter_index_list">#4d0D0D11</color>
+
+    <color name="title_color">#6a788c</color>
+    <color name="bar_color">#fff</color>
+    
+    <color name="map_hint">#dd758bca</color>
+    <color name="cancle">#afb5bf</color>
+
+    <color name="userinfo_save_e">#33a2a1</color>
+    <color name="userinfo_save_u">#6a788c</color>
+
+    <color name="login_hint">#d9d9d9</color>
+    <color name="login_text">#fff</color>
+    <color name="login_code_normal">#5e75b6</color>
+    <color name="login_code_countingdown">#b3b3b3</color>
+
+    <color name="setting_textcolor">#6a788c</color>
+    <color name="black_bantou">#e0000000</color>
+    <color name="user_back_green">#329c3e</color>
+    <color name="text_color_black">#131318</color>
+    <color name="back_gray">#f3f3f3</color>
+    <color name="white">#ffffff</color>
+    <color name="tu_biao">#20BB71</color>
+
+</resources>

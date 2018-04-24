@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+    <data class="ItemSeeShopView">
+        <variable
+            name="item"
+            type="com.yidao.threekmo.bean.MainHomeListItem" />
+        <variable
+            name="event"
+            type="com.yidao.threekmo.v2.viewmodel.IndexFragmentVm" />
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@color/color_FFFFFF"
+        android:paddingTop="10px"
+        app:paddingTop="@{10}"
+        android:onClick="@{()->event.clickListItem(item)}"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="32px"
+            app:textSize="@{32}"
+            android:textColor="#1b1b1b"
+            android:maxLines="2"
+            android:id="@+id/title"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            app:layout_marginLeft="@{30}"
+            app:layout_marginRight="@{30}"
+            android:visibility="@{item.labelVisible()}"
+            android:text="@{item.name}"
+            tool:text="5分钟喝到的喜茶，曾经派对2小时的网红奶茶店真的过气了"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/img"
+            app:imageUrl="@{item.photo}"
+            app:width="@{690}"
+            app:height="@{380}"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            app:layout_marginLeft="@{30}"
+            app:layout_marginRight="@{30}"
+            android:layout_below="@id/title"
+            android:layout_marginTop="20px"
+            app:layout_marginTop="@{20}"
+            app:layout_width="@{690}"
+            app:layout_height="@{380}"
+            android:layout_width="690px"
+            android:layout_height="380px" />
+
+        <TextView
+            android:layout_below="@id/img"
+            android:layout_alignLeft="@id/img"
+            android:layout_marginTop="20px"
+            app:layout_marginTop="@{20}"
+            android:textColor="#787878"
+            android:textSize="28px"
+            app:textSize="@{28}"
+            android:text="@{item.dateForSeeShop()}"
+            tool:text="2018-1-29 11:23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_below="@id/img"
+            android:paddingTop="34px"
+            app:paddingTop="@{34}"
+            android:paddingBottom="30px"
+            app:paddingBottom="@{30}"
+            android:onClick="@{()->event.share(item)}"
+            android:layout_alignParentRight="true"
+            android:paddingRight="30px"
+            app:paddingRight="@{30}"
+            android:paddingLeft="45px"
+            app:paddingLeft="@{45}"
+            android:src="@mipmap/icon_see_shop_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_below="@id/share"
+            android:layout_width="match_parent"
+            app:layout_height="@{10}"
+            android:background="#F3F3F3"
+            android:layout_height="10px" />
+
+    </RelativeLayout>
+</layout>

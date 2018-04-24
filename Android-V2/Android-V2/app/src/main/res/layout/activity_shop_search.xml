@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="#f2f2f2"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yidao.threekmo.activitys.ShopSearchActivity">
+
+    <RelativeLayout
+        android:id="@+id/search_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/alpha_green">
+
+        <EditText
+            android:id="@+id/search_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="想要的都在这里..."
+            android:textColor="#3a3a3a"
+            android:textColorHint="#9f9f9f"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:background="@drawable/shape_circle_shop_white"/>
+
+        <TextView
+            android:id="@+id/search_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@android:color/white"
+            android:text="取消"/>
+
+        <ImageView
+            android:id="@+id/search_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/search2"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/blockSearchTags"
+            layout="@layout/block_search_tags"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"></include>
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/recyclerview"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+        <include
+            android:id="@+id/blockNosearch"
+            android:visibility="gone"
+            layout="@layout/block_nosearch_content"></include>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

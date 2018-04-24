@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.yidao.threekmo.customview.RoundLayout
+        android:id="@+id/roundLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:roundLayoutRadius="8dp"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#3a3a3a"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#f01e1e"/>
+
+        <RelativeLayout
+            android:id="@+id/rela"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#20c174">
+
+            <TextView
+                android:id="@+id/pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="购买"
+                android:textColor="@android:color/white"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </com.yidao.threekmo.customview.RoundLayout>
+
+</RelativeLayout>
